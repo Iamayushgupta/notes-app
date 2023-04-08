@@ -38,12 +38,12 @@ const removeNote = (title)=>{
 
 const readNote = (title)=>{
     const notes= loadNotes()
-    const read = notes.find((note)=>note.title===title)
+    const read = notes.find((note)=>note.title==title)
     if (!read){
         console.log(chalk.red("Note not found"))
     }
     else{
-        console.log(read[0].body)
+        console.log(read.body)
     }
 }
 
